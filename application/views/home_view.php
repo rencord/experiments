@@ -12,13 +12,17 @@
 		<div class="row-fluid weel">
 			<div class="span6">
 				<?php echo validation_errors(); ?>
-				<?php echo form_open('insert_post'); ?>
+				<?php echo form_open('posts'); ?>
 				<input type="text" name="post" placeholder="insert text here">
 				<input type="hidden" name="user" value="<?php echo $username;?>">
 				<input type="submit" value="Inserisci Post">
 			</div>
 			<div class="span6">
-			Ciao Mondo! 
+		
+			Post Pubblicati: 
+				<? foreach($posts as $row)
+					echo $row;
+				?>
 			</div>
 		</div>
 	</div>
